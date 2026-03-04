@@ -1,0 +1,122 @@
+{
+  "projectType": "saas",
+  "projectName": "eXeLearning",
+  "projectDescription": "An AGPL-licensed free/libre tool to create and publish open educational resources.",
+  "theme": "almond",
+  "primaryColor": "#040404",
+  "lightColor": "#142434",
+  "darkColor": "#24dcc4",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Features",
+            "pages": [
+              "features/authoring",
+              "features/idevices",
+              "features/collaboration",
+              "features/export-formats"
+            ]
+          },
+          {
+            "group": "User Guide",
+            "pages": [
+              "guide/creating-content",
+              "guide/managing-projects",
+              "guide/themes",
+              "guide/media-files"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/overview",
+              "deployment/docker",
+              "deployment/desktop-app",
+              "deployment/configuration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "REST API",
+            "pages": [
+              "api/overview",
+              "api/authentication",
+              "api/projects",
+              "api/pages",
+              "api/assets",
+              "api/export"
+            ]
+          },
+          {
+            "group": "WebSocket",
+            "pages": [
+              "api/websocket/overview",
+              "api/websocket/yjs-collaboration"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Development",
+        "groups": [
+          {
+            "group": "Contributing",
+            "pages": [
+              "development/setup",
+              "development/architecture",
+              "development/testing",
+              "development/i18n"
+            ]
+          },
+          {
+            "group": "Extending",
+            "pages": [
+              "development/creating-idevices",
+              "development/custom-themes",
+              "development/embedding"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Interactive educational content authoring",
+    "Real-time collaborative editing with Yjs",
+    "Multiple export formats (SCORM 1.2/2004, HTML5, EPUB3, IMS)",
+    "Desktop and web deployment options",
+    "Multi-language support",
+    "Extensible iDevice system",
+    "RESTful API and WebSocket support",
+    "Multiple authentication methods",
+    "Multi-database support (SQLite, PostgreSQL, MySQL)"
+  ],
+  "publicApiSurface": [
+    "POST /api/v1/auth/login - User authentication",
+    "POST /api/v1/projects - Create new project",
+    "GET /api/v1/projects/:id - Get project details",
+    "PUT /api/v1/projects/:id - Update project",
+    "POST /api/v1/pages - Create page",
+    "GET /api/v1/pages/:id - Get page content",
+    "POST /api/v1/assets/upload - Upload asset",
+    "POST /api/v1/export/:format - Export project",
+    "WebSocket /ws - Real-time collaboration",
+    "CLI: bun run cli elp:convert - Convert legacy ELP files",
+    "CLI: bun run cli elp:export - Export projects"
+  ]
+}
